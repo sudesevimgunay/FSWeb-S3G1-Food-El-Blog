@@ -1,22 +1,46 @@
+/* * {
+  border: 2px solid tomato;
+  background: rgba(47, 205, 123, 0.2);
+  box-sizing: border-box;
+} */
+
 /*======= Font rengini #3C373B yapan bir yeni bir universal selector yaratın*/
 
-
-h1 {
-  font-family: 'Gaegu', cursive;
-  margin: 20px 0;
-  /*=======  Font size'ı 60px yapın ve text'i ortalayın(center) */
-  font-size: 10px;
+* {
+  color: #3c373b;
 }
 
-h2, h3, h4, h5, h6 {
-  font-family: 'Gaegu', cursive;
+body {
+  margin: 0;
+  padding: 0;
+
+  /*======= background property yaratın. Değerini #F5F5F5 olarak atayın */
+  background: #f5f5f5;
+}
+
+h1 {
+  font-family: "Gaegu", cursive;
+  margin: 20px 0;
+  /*=======  Font size'ı 60px yapın ve text'i ortalayın(center) */
+  text-align: center;
+  font-size: 60px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Gaegu", cursive;
   margin-bottom: 0;
   padding: 0 10px;
   /*=======  Font size'ı 30px yapın*/
-  font-size: 10px;
+  font-size: 30px;
 }
 
 /*======= Sayfadaki TÜM p tag'leri için aşağıdaki özellikleri içeren bir selector yaratın:
+
+
 
 font-size: 16px;
 font-family: roboto;
@@ -25,6 +49,12 @@ line-height: 1.4;
 
 */
 
+p {
+  font-size: 16px;
+  font-family: "Roboto";
+  padding: 10px;
+  line-height: 1.4;
+}
 
 /*======= Sayfadaki TÜM imajlar için aşağıdaki özellikleri içeren bir selector yaratın:
 
@@ -32,16 +62,26 @@ line-height: 1.4;
 
 */
 
+img {
+  border-radius: 10px;
+}
+
 .content-row {
   display: flex;
 }
 
 .content-row div {
   /*======= margin propery yaratın.  Değerini 20px olarak atayın*/
+  margin: 20px;
+}
+.content-row img {
+  width: 40%;
+  object-fit: cover;
 }
 
 .container {
   /*======= width property yaratın. Değerini 750px olarak atayın */
+  width: 750px;
   margin: 0 auto;
 }
 
@@ -54,17 +94,32 @@ line-height: 1.4;
   color: white;
   text-decoration: none;
   margin-bottom: 20px;
-   /*======= background property yaratın. Değerini #E79947 olarak atayınız.*/
-  
+  /*======= background property yaratın. Değerini #E79947 olarak atayınız.*/
+  background: #e79947;
 }
 
 .container header nav a:hover {
-/*======= background property yaratın ve değeri white olsun.  Sonra, color property yaratın ve değerini #E79947 yapın. */
+  /*======= background property yaratın ve değeri white olsun.  Sonra, color property yaratın ve değerini yapın. */
+  background: white;
+  color: #e79947;
+}
+
+.banner {
+  background-color: lightgray;
+  padding: 20px;
+}
+
+.banner img {
+  width: 100%;
 }
 
 /*======= Hakkmızda bölümü için aşağıdaki stilleri içeren bir selector yaratın:
   margin-top: 20px;
 */
+
+.about-section {
+  margin-top: 20px;
+}
 
 .contact-section {
   border-top: 1px dashed black;
@@ -79,17 +134,20 @@ line-height: 1.4;
 /*======= contact-section class'da address tag'i için aşağdıaki stilleri içeren bir selector yaratın:
    line-height: 2;
 */
+.contact-section address {
+  line-height: 2;
+}
 
 footer {
   width: 100%;
-  background: #E79947;
+  background: #e79947;
   border-top: 1px dashed white;
 }
 
-footer .footer-content { 
-  margin: 0 auto; 
+footer .footer-content {
+  margin: 0 auto;
   /*======= width property yaratın. Değerini 750px olarak atayın */
-  
+  width: 750px;
 }
 
 footer .footer-content h3 {
@@ -107,9 +165,18 @@ footer nav {
   text-decoration: underline;
 */
 
+footer nav a {
+  margin: 10px;
+  color: black;
+  text-decoration: underline;
+}
 
 footer nav a:first-child {
   margin-left: 0;
+}
+
+footer nav a:hover {
+  color: white;
 }
 
 /*======= Footer nav'daki anchor tag için aşağıdaki stilleri içeren bir hover state yaratın:
@@ -118,5 +185,6 @@ footer nav a:first-child {
 
 footer .footer-content .copyright {
   padding: 20px 0;
-   /*======= metni ortalayacak kodu yazın */
+  /*======= metni ortalayacak kodu yazın */
+  text-align: center;
 }
